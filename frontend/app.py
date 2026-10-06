@@ -5,7 +5,7 @@ API_URL = "http://127.0.0.1:8000/chat"
 
 st.set_page_config(page_title="Banking RAG Chatbot", layout="centered")
 
-st.title("🏦 Banking & Insurance RAG Chatbot")
+st.title("Banking & Insurance RAG Chatbot")
 st.write("Ask questions related to banking or insurance policies.")
 
 if "chat_history" not in st.session_state:
@@ -27,11 +27,11 @@ if submit_button and question.strip() != "":
         else:
             st.error(f"Backend error: Received status code {response.status_code}")
     except requests.exceptions.ConnectionError:
-        st.error("❌ Unable to connect to the backend server. Make sure your FastAPI/Uvicorn app is running at port 8000!")
+        st.error("Unable to connect to the backend server. Make sure your FastAPI/Uvicorn app is running at port 8000!")
 
 # Display chat history
 for role, msg in st.session_state.chat_history:
     if role == "You":
-        st.markdown(f"**🧑 You:** {msg}")
+        st.markdown(f"** You:** {msg}")
     else:
-        st.markdown(f"**🤖 Bot:** {msg}")
+        st.markdown(f"** Bot:** {msg}")
