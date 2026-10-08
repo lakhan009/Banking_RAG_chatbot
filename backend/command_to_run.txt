@@ -1,0 +1,9 @@
+C:/anaconda/Scripts/activate
+conda activate my_env
+
+python -m backend.ingest
+
+# run below two command on different terminals 
+uvicorn backend.main:app --host 127.0.0.1 --port 8000
+streamlit run frontend/app.py
+
