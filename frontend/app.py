@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 import requests
 
 API_URL = "http://127.0.0.1:8000/chat"
@@ -14,7 +14,7 @@ if "chat_history" not in st.session_state:
 # 1. Wrapped in a form to allow native input clearing on submit
 with st.form("chat_form", clear_on_submit=True):
     question = st.text_input("Ask your question:")
-    submit_button = st.form_submit_button("Send")
+    submit_button = st.form_submit_button("Send") 
 
 if submit_button and question.strip() != "":
     try:
