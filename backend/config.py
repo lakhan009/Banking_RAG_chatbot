@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-# OPENAI_API_KEY = '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'
+# OPENAI_API_KEY = 'sk-proj####'
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
  
 
